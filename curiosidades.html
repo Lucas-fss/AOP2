@@ -6,7 +6,7 @@
   <title>Blog de Gastronomia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="container">
   <header>
     <h1>Blog de Gastronomia</h1>
     <p>Sabores, histórias e dicas da cozinha para você!</p>
@@ -20,18 +20,39 @@
     <a href="contato.html">Contato</a>
   </nav>
 
-<main>
+  <main>
     <h2>Curiosidades</h2>
-    <p>Fatos incríveis do mundo da culinária!</p>
-  
-    <ul>
-      <li>🍕 A pizza foi reconhecida como patrimônio cultural imaterial da humanidade.</li>
-      <li>🍫 O chocolate já foi usado como moeda pelos Maias.</li>
-      <li>🍯 O mel nunca estraga — foi encontrado em tumbas egípcias ainda comestível!</li>
-    </ul>
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-card">
+          <img src="images/pizza.png"><br>
+          <p>🍕 A pizza foi reconhecida como patrimônio cultural imaterial da humanidade.</p>
+        </div>
+        <div class="carousel-card">
+          <img src="images/chocolate.png"><br>
+          <p>🍫 O chocolate já foi usado como moeda pelos Maias.</p>
+        </div>
+        <div class="carousel-card">
+          <img src="images/mel.png"><br>
+          <p>🍯 O mel nunca estraga. Já foi encontrado em tumbas egípcias ainda comestível!</p>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button onclick="scrollCarousel(-1)">&#10094;</button>
+        <button onclick="scrollCarousel(1)">&#10095;</button>
+      </div>
+    </div>
   </main>
+  
   <footer>
     <p>&copy; 2025 Blog de Gastronomia. Todos os direitos reservados.</p>
   </footer>
 </body>
+<script>
+  function scrollCarousel(direction) {
+    const track = document.getElementById('carousel-track');
+    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 20; // +gap
+    track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  }
+</script>
 </html>
