@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog de Gastronomia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Blog de Gastronomia</h1>
+    <p>Sabores, histórias e dicas da cozinha para você!</p>
+  </header>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="receitas.html">Receitas</a>
+    <a href="dicas.html">Dicas Culinárias</a>
+    <a href="curiosidades.html">Curiosidades</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <main>
+      <h2>Receitas</h2>
+      <p>Explore uma seleção de receitas testadas e aprovadas!</p>
+    
+      <ul id="lista-receitas">
+        <li>
+          <div class="receitas" data-id="carbonara">
+            <a href="#"><img src="images/carbonara.png" alt="Carbonara" />
+            <p><strong>Macarrão à Carbonara</strong></p></a>
+          </div>
+        </li>
+        <li>
+          <div class="receitas" data-id="moqueca">
+            <a href="#"><img src="images/moqueca.png" alt="Moqueca" />
+            <p><strong>Moqueca Baiana</strong></p></a>
+          </div>
+        </li>
+        <li>
+          <div class="receitas" data-id="cheesecake">
+            <a href="#"><img src="images/dicas.png" alt="Cheesecake" />
+            <p><strong>Cheesecake de Frutas Vermelhas</strong></p></a>
+          </div>
+        </li>
+      </ul>
+      
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Blog de Gastronomia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+  const receitas = {
+    carbonara: `
+      <div class="detalhe-receita">
+        <h3>Macarrão à Carbonara</h3>
+        <p>Uma receita clássica italiana feita com ovos, queijo parmesão, pancetta e pimenta-do-reino.</p>
+        <h4>Ingredientes</h4>
+        <ul>
+          <li>bacon picado a gosto</li>
+          <li>queijo ralado a gosto</li>
+          <li>3 ovos</li>
+          <li>sal</li>
+          <li>pimenta-do-reino a gosto</li>
+          <li>macarrão espaguete</li>
+          <li>creme de leite</li>
+          <li>creme de leite se quiser dar um toque diferente à receita</li>
+        </ul>
+        <h4>Modo de Preparo</h4>
+        <ul>
+          <li>Frite bem o bacon, até ficar crocante (pode-se adicionar salame picado).</li>
+          <li>Coloque o macarrão para cozinhar em água e sal.</li>
+          <li>No refratário onde será servido o macarrão, bata bem os ovos com um garfo.</li>
+          <li>Tempere com sal e pimenta a gosto, e junte o queijo ralado, também a gosto.</li>
+          <li>Quando o macarrão estiver pronto, escorra e coloque (bem quente) sobre a mistura de ovos, misture bem.</li>
+          <li>O calor da massa cozinha os ovos</li>
+          <li>Coloque o bacon, ainda quente, sobre o macarrão e sirva.</li>
+        </ul>
+      </div>
+    `,
+    moqueca: `
+      <div class="detalhe-receita">
+        <h3>Moqueca Baiana</h3>
+        <p>Peixe cozido com leite de coco, azeite de dendê, cebola, tomate e pimentões.</p>
+        <h4>Ingredientes</h4>
+        <ul>
+          <li>2 kg de peixe (surubim ou badejo) em postas grossas</li>
+          <li>limão</li>
+          <li>1 limão</li>
+          <li>Sal, alho, pimenta</li>
+          <li>tomate</li>
+          <li>1 kg de tomates maduros</li>
+          <li>cebola</li>
+          <li>2 cebolas grandes</li>
+          <li>pimentão</li>
+          <li>1 pimentão</li>
+          <li>coentro</li>
+          <li>1 maço de coentro</li>
+          <li>azeite de dendê</li>
+          <li>Azeite de dendê</li>
+          <li>leite de coco</li>
+          <li>1 vidro de leite de coco</li>
+          <li>camarão cinza</li>
+          <li>Camarões miúdos (opcional)</li>
+        </ul>
+        <h4>Modo de Preparo</h4>
+        <ul>
+          <li>Tempere as postas de peixe com limão, sal, alho e a pimenta.</li>
+          <li>Em uma panela grande, coloque meia xícara de azeite de dendê, uma colher de alho socado com sal e deixe fritar bem.</li>
+          <li>Em seguida, coloque a cebola cortada em cubinhos, os tomates picados (com semente e tudo), o pimentão cortado em rodelas grossas, e se gostar mais um pouco de pimenta.</li>
+          <li>Deixe refogando com a panela tampada por uns 5 minutos.</li>
+          <li>Se precisar coloque um pouco de água.</li>
+          <li>Coloque as postas de peixe nesse molho ajeitando com cuidado.</li>
+          <li>Deixe ferver por mais 10 minutos com a panela tampada.</li>
+          <li>Se secar muito pingue água.</li>
+          <li>Quando estiver cozido o peixe (espete a ponta do garfo ou uma faca, não mexa para não despedaçar), coloque o leite de coco e o coentro picadinho.</li>
+          <li>Se quiser, pode colocar mais um pouco de água, deixar ferver.</li>
+          <li>Retire um pouco do caldo para fazer um pirão com farinha de mandioca.</li>
+          <li>Sirva com arroz branco.</li>
+        </ul>
+      </div>
+    `,
+    cheesecake: `
+      <div class="detalhe-receita">
+        <h3>Cheesecake de Frutas Vermelhas</h3>
+        <p>Base crocante, recheio cremoso e cobertura de frutas vermelhas frescas.</p>
+        <h3>Ingredientes</3>
+        <h4>Base</h4>
+        <ul>
+          <li>1 pacote de biscoito de maisena</li>
+          <li>100 gramas de margarina</li>
+        </ul>
+        <h4>Cobertura</h4>
+        <ul>
+          <li>400 gramas de framboesas picadas</li>
+          <li>400 gramas de morangos picados</li>
+          <li>150 gramas de açúcar</li>
+        </ul>
+        <h3>Modo de Preparo</3>
+        <h4>Base</h4>
+        <ul>
+          <li>Triture os biscoitos no processador ou liquidificador. Misture com a margarina e forre a base de uma forma de fundo removível.</li>
+          <li>Despeje o creme e leve ao forno médio preaquecido a 180 graus Celsius por cerca de 40 minutos ou até firmar.</li>
+          <li>Deixe esfriar na geladeira antes de desenformar e cobrir com a geleia. Sirva decorada a gosto.</li>
+        </ul>
+        <h4>Creme</h4>
+        <ul>
+          <li>Bata todos os ingredientes no liquidificador até ficar homogêneo.</li>
+        </ul>
+        <h4>Cobertura</h4>
+        <ul>
+          <li>Leve os ingredientes ao fogo médio, mexendo sempre, até formar uma geleia. Espere esfriar antes de utilizar.</li>
+        </ul>
+      </div>
+    `
+  };
+
+  document.querySelectorAll('.receitas').forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const li = item.closest('li');
+      const existingDetail = li.querySelector('.detalhe-receita');
+
+      // Se já está aberta, fecha
+      if (existingDetail) {
+        existingDetail.remove();
+        return;
+      }
+
+      // Fecha outras abertas
+      document.querySelectorAll('.detalhe-receita').forEach(el => el.remove());
+
+      const id = item.getAttribute('data-id');
+      li.insertAdjacentHTML('beforeend', receitas[id]);
+
+      // Adiciona evento ao botão "Fechar"
+      li.querySelector('.fechar-receita').addEventListener('click', function () {
+        li.querySelector('.detalhe-receita').remove();
+      });
+    });
+  });
+</script>
+
+</html>
+  
+    
